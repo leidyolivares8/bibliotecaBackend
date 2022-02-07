@@ -51,10 +51,9 @@ app.get('/libro', (req, res) => {
                 message: 'No hay libros registrados.'
             });
         }
-        res.json({
-            ok: true,
+        res.json(
             librosDB
-        });
+        );
     });
 });
 //=====================================
