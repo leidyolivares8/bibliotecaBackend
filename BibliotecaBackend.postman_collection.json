@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "f3ac37fa-b4dd-415a-9812-23709137027a",
+		"name": "Biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Libro",
+			"item": [
+				{
+					"name": "libro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                \"titulo\": \"El poder del ahora\",\r\n                \"autor\":\"WEckhart Tolle\",\r\n                \"anio\":\"1997\",\r\n                \"editorial\":\"\",\r\n                \"categoria\":\"Espiritualidad y psicología\",\r\n                \"idioma\":\"Español\",\r\n                \"ubicacion\":\"Pasillo 1 t1\",\r\n                \"disponible\":\"true\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/libro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "libros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/libro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "libro nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/libro/azul",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libro",
+								"azul"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "libro",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                \"titulo\": \"La estrategia del océano azul\",\r\n                \"autor\":\"W. Chan Kim, Renée Mauborgne\",\r\n                \"anio\":\"2004\",\r\n                \"editorial\":\"Harvard Business Publishing\",\r\n                \"categoria\":\" Administración de empresas\",\r\n                \"idioma\":\"Español\",\r\n                \"ubicacion\":\"Pasillo 3333 t1111\" ,\r\n                \"disponible\":\"true\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:3000/libro/61fec5c516d10b33dc44bc4b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libro",
+								"61fec5c516d10b33dc44bc4b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "libro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/libro/61fc1795b679d608f3463ddd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libro",
+								"61fc1795b679d608f3463ddd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "usuario",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"tipoIdentificacion\":\"CC\",\r\n        \"identificacion\":\"94205211\",\r\n        \"nombre\":\"Nora Palma\",\r\n        \"celular\":\"3015844552\",\r\n        \"correo\":\"npalma@gmail.com\",\r\n        \"direccion\":\"Cr 70 #10-41\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuario por identificacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/usuario/94205211",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuario",
+								"94205211"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"celular\": \"3014545445\",\r\n            \"correo\": \"npalmados@gmail.com\",\r\n            \"direccion\": \"Cr 71 #10-62\"\r\n          \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuario/61fecc7c8264a237b8ec38c4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuario",
+								"61fecc7c8264a237b8ec38c4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/usuario/61feccd08264a237b8ec38c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuario",
+								"61feccd08264a237b8ec38c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prestamo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"identificacion\": \"94205211\",\r\n            \"codigoLibro\": \"61fec66b16d10b33dc44bc4c\",\r\n            \"fechaMaxima\": \"2022-05-05T05:00:00.000Z\"\r\n            \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/prestamo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"prestamo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prestamo entrega",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n           \"identificacion\": \"94205211\",\r\n            \"codigoLibro\": \"61fec66b16d10b33dc44bc4c\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/prestamo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"prestamo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
